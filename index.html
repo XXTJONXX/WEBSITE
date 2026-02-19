@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tion Zijlstra — Portal</title>
+    <style>
+      :root {
+        --bg: #07090f;
+        --bg-accent: #11162a;
+        --text: #f4f7ff;
+        --muted: #96a0c2;
+        --primary: #4c78ff;
+        --secondary: #8c2bff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at 20% 15%, #1a2040 0%, transparent 40%),
+          radial-gradient(circle at 85% 80%, #241447 0%, transparent 45%),
+          var(--bg);
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        padding: 1.5rem;
+      }
+
+      .card {
+        width: min(900px, 100%);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 22px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+        backdrop-filter: blur(8px);
+        padding: clamp(1.5rem, 4vw, 3rem);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+      }
+
+      .eyebrow {
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-size: 0.75rem;
+        margin: 0 0 0.9rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 4.4vw, 3.2rem);
+        line-height: 1.1;
+      }
+
+      .sub {
+        margin: 0.9rem 0 2rem;
+        color: var(--muted);
+        font-size: clamp(0.95rem, 2vw, 1.1rem);
+        max-width: 42ch;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+        gap: 0.9rem;
+      }
+
+      .btn {
+        border: 0;
+        border-radius: 14px;
+        padding: 1rem 1.1rem;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        font-weight: 700;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+        min-height: 3.3rem;
+      }
+
+      .btn:focus-visible {
+        outline: 2px solid #ffffff;
+        outline-offset: 2px;
+      }
+
+      .btn-request {
+        background: linear-gradient(120deg, var(--primary), #5ea5ff);
+        box-shadow: 0 12px 26px rgba(76, 120, 255, 0.35);
+      }
+
+      .btn-watch {
+        background: linear-gradient(120deg, var(--secondary), #c14bff);
+        box-shadow: 0 12px 26px rgba(140, 43, 255, 0.35);
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.07);
+      }
+
+      .btn:active {
+        transform: translateY(0);
+      }
+
+      @media (max-width: 520px) {
+        .actions {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <p class="eyebrow">Tion Zijlstra • Cinema Gateway</p>
+      <h1>Choose your next scene.</h1>
+      <p class="sub">
+        Minimal, premium, and built for a movie-night vibe. Pick where your journey begins.
+      </p>
+      <section class="actions" aria-label="Main options">
+        <button class="btn btn-request" type="button">Request</button>
+        <button class="btn btn-watch" type="button">Watch</button>
+      </section>
+    </main>
+  </body>
+</html>
